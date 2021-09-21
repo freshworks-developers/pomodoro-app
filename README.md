@@ -10,7 +10,7 @@ The pomodoro app enables users to schedule work sessions based on the pomodoro t
 
 ### Screenshots
 
-<img src="./Screenshots/app face.png" width="250">  
+<img src="https://github.com/freshworks-developers/pomodoro-app/blob/main/Screenshots/App%20Face.png" width="250">  
 
 for other screenshots please refer to the [Screenshots](./screenshots/) folder
 
