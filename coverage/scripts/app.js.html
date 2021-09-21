@@ -1,0 +1,932 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/app.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">scripts/</a> app.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.57% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>43/101</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">21.43% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>3/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">38.89% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>14/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">42.57% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>43/101</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277
+278
+279
+280
+281
+282
+283
+284
+285
+286
+287
+288
+289
+290</td><td class="line-coverage quiet"><span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">let client = null;
+let user_id = null;
+let sessionState = false;
+let t1 = null,
+  t2 = null,
+  t3 = null,
+  t4 = null;
+let endTime = null;
+&nbsp;
+// Start the App initialization based on the document load status
+isDocumentReady();
+&nbsp;
+function startAppRender() {
+  checkTimer();
+  app.initialized().then(function(_client) {
+    client = _client;
+    client.events.on("app.activated", function() {
+      /**
+       * get the id of the user logged in using the data API
+       */
+      client.data.get("loggedInUser").then(
+        function(data) {
+          user_id = data.loggedInUser.user.id.toString();
+        },
+&nbsp;
+        function(err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >          notifyUser("error", "couldn't get loggedInUser");</span>
+<span class="cstat-no" title="statement not covered" >          console.error("couldn't get loggedInUser, %o", err);</span>
+        }
+      );
+    });
+  });
+&nbsp;
+  /**
+   * a click event handler to start and stop pomodoro sessions
+   */
+  document.querySelector("#startStopButton").addEventListener("click", (event) =&gt; {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (!sessionState) {
+      makeSMICall("startPomodoro").then(
+        () =&gt; {
+          startSession();
+          sessionState = true;
+        },
+&nbsp;
+        err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >          console.error("Couldn't start sessions\n%o", err);</span>
+<span class="cstat-no" title="statement not covered" >          notifyUser("error", "Couldn't start session");</span>
+        }
+      );
+    } else {
+<span class="cstat-no" title="statement not covered" >      stopPomodoro(0);</span>
+<span class="cstat-no" title="statement not covered" >      sessionState = false;</span>
+    }
+  });
+&nbsp;
+  /**
+   * a click event handler to get user's past sessions data, process it and pass it to a modal to show output in chart form
+   * refer mod.js for flow continuation
+   */
+  document.querySelector("#showActivity").addEventListener("click", () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+    let hs = <span class="cstat-no" title="statement not covered" >[];</span>
+    let td = <span class="cstat-no" title="statement not covered" >null;</span>
+<span class="cstat-no" title="statement not covered" >    client.db.get(user_id).then(</span>
+      function(data) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        td = data.totalDays;</span>
+<span class="cstat-no" title="statement not covered" >        data.history.forEach((element, index) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          hs.push([index + 1, element.noOfSessions, element.noOfInterruptions]);</span>
+        });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        client.interface.trigger("showModal", {</span>
+          title: "Pomodoro Activity",
+          template: "./views/mod.html",
+          data: { totalDays: td, history: hs }
+        });
+      },
+&nbsp;
+      function(err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error("couldn't get data for showActivity, %o", err);</span>
+      }
+    );
+  });
+&nbsp;
+  /**
+   * a click event handler to clear all of the user's activity and schedules using clearActivity server.js method
+   */
+  document.querySelector("#clearActivity").addEventListener("click", () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    makeSMICall("clearActivity").then(</span>
+      () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >notifyUser("success", "cleared all activity!"),</span></span>
+      () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >notifyUser("error", "couldn't clear activity")</span></span>
+    );
+  });
+&nbsp;
+  /**
+   * a click event handler to populate user data randomly using generateTestData server.js method
+   */
+  document.querySelector("#testData").addEventListener("click", () =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    makeSMICall("generateTestData").then(</span>
+      () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >notifyUser("success", "Test data populated successfully!"),</span></span>
+      () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >notifyUser("error", "couldn't populate test data")</span></span>
+    );
+  });
+&nbsp;
+  /**
+   * registering an event to save timer if the pages was unloaded during session
+   */
+  window.addEventListener("beforeunload", saveTimer);
+}
+&nbsp;
+/**
+ * a helper function to triggers notifications
+ * @param {string} notificationType - type of notification to be triggered
+ * @param {string} notificationMessage - notification message to be displayed
+ */
+function notifyUser(notificationType, notificationMessage) {
+  client.interface.trigger("showNotify", {
+    type: notificationType,
+    message: notificationMessage
+  });
+}
+&nbsp;
+function startText() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementById("sessionText").innerText = "Click me to start focus mode!!!";</span>
+<span class="cstat-no" title="statement not covered" >    document.getElementById("startStopButton").innerText = "Start";</span>
+}
+&nbsp;
+function stopText() {
+    document.getElementById("sessionText").innerText = "Click me to stop focus mode!!!";
+    document.getElementById("startStopButton").innerText = "Stop";
+}
+&nbsp;
+/**
+ * Function to show user that his session has started using a helper function
+ */
+function startSession() {
+  notifyUser("warning", "your 25 mins streak starts!");
+  t2 = setTimeout(takeBreak, 1500000);
+  startTimer();
+  countdown();
+  stopText();
+}
+&nbsp;
+/**
+ * a function to tell users that they should take thier 5 mins break using a helper function
+ * It also triggers nextSessionCheck and session functions to notfy about thier progress using js setTimeout
+ */
+function takeBreak() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  notifyUser("success", "take a 5 mins break!");</span>
+<span class="cstat-no" title="statement not covered" >  t3 = setTimeout(nextSessionCheck, 290000);</span>
+}
+&nbsp;
+/**
+ * This function is executed before the break period's end time to ask if the user
+ * wants to continue having pomodoro sessions or not
+ * They can give thier response using the showConfirm interface triggered by this method
+ */
+function nextSessionCheck() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  client.interface</span>
+    .trigger("showConfirm", {
+      title: "Do you want to continue ?",
+      message:
+        "your break's about to be over, do you want to start a new pomodoro session ? "
+    })
+    .then(function(result) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      if (result.message === "OK") {</span>
+<span class="cstat-no" title="statement not covered" >        t1 = setTimeout(session, 10000);</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        stopPomodoro(1);</span>
+      }
+    })
+    .catch(function(err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >      console.error("Error with showConfirm: %o", err);</span>
+    });
+}
+&nbsp;
+/**
+ * This function invokes interruptSchedule server.js methods via a helper function
+ * It also clears the setTimeout and setInterval events put forth by takeBreak and takebreak itself
+ */
+function stopPomodoro(flag) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  flag === 1 ? makeSMICall("stopSchedule") : makeSMICall("interruptSchedule").then(() =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          stopTimer();</span>
+<span class="cstat-no" title="statement not covered" >          clearTimeout(t1);</span>
+<span class="cstat-no" title="statement not covered" >          clearTimeout(t3);</span>
+<span class="cstat-no" title="statement not covered" >          clearTimeout(t2);</span>
+<span class="cstat-no" title="statement not covered" >          startText();</span>
+        },
+&nbsp;
+        () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >notifyUser("error", "couldn't stop session!")</span></span>
+      );
+}
+&nbsp;
+/**
+ * SMI stands for Server Method Invocation
+ * It is a mechanism through which frontend component of an app can invoke the serverless component of the app.
+ * Here we call the method (paramter methodName) which is defined in the server.js and will be executed in the server.
+ * We can also pass data to it in the form JSON. here we pass the ID of the user logged in.
+ * @param {string} - methodName name of the server.js method you wish to call
+ * @param {JSON} - ID of the username logged in
+ */
+function makeSMICall(methodName) {
+  return client.request.invoke(methodName, { id: user_id });
+}
+&nbsp;
+/**
+ * a function to save data of running counter using localstorage
+ */
+function saveTimer() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  if (sessionState) {</span>
+<span class="cstat-no" title="statement not covered" >    localStorage.setItem(</span>
+      "timerStorage",
+      JSON.stringify({ state: sessionState, end: endTime })
+    );
+  }
+}
+&nbsp;
+/**
+ * a function to set the session's end time and start countdown
+ */
+function startTimer() {
+  endTime = new Date();
+  endTime.setMinutes(endTime.getMinutes() + 25);
+  t4 = setInterval(countdown, 1000);
+}
+&nbsp;
+/**
+ * function to update the counter
+ */
+function countdown() {
+  let current = endTime - new Date();
+  let minutes = Math.floor((current % (1000 * 60 * 60)) / (1000 * 60));
+  let seconds = Math.floor((current % (1000 * 60)) / 1000);
+  document.getElementById("timer").innerText = `${minutes} min  :  ${seconds} sec`;
+}
+&nbsp;
+/**
+ * function to check if there is a running session,
+ * if so change the global variables which affetcs the UI and resumes the timer
+ */
+function checkTimer() {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (localStorage.getItem("timerStorage") !== null) {
+    let temp = <span class="cstat-no" title="statement not covered" >localStorage.getItem("timerStorage");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    try {</span>
+<span class="cstat-no" title="statement not covered" >      temp = JSON.parse(temp);</span>
+    } catch (error) {
+<span class="cstat-no" title="statement not covered" >      notifyUser("error", "couldn't parse the stored time");</span>
+<span class="cstat-no" title="statement not covered" >      console.error(</span>
+        "couldn't parse the stored time",
+        error.name,
+        error.message
+      );
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    endTime = new Date(temp.end);</span>
+<span class="cstat-no" title="statement not covered" >    sessionState = temp.state;</span>
+<span class="cstat-no" title="statement not covered" >    stopText();</span>
+<span class="cstat-no" title="statement not covered" >    countdown();</span>
+<span class="cstat-no" title="statement not covered" >    t4 = setInterval(countdown, 1000);</span>
+    let difference = <span class="cstat-no" title="statement not covered" >endTime.getTime() - new Date().getTime();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (difference &gt; 300000) {</span>
+<span class="cstat-no" title="statement not covered" >      t2 = setTimeout(takeBreak, difference - 300000);</span>
+    } else {
+<span class="cstat-no" title="statement not covered" >      t3 = setTimeout(nextSessionCheck, difference - 10000);</span>
+    }
+  }
+}
+&nbsp;
+/**
+ * function to remove countdown and endTime
+ */
+function stopTimer() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >  endTime = null;</span>
+<span class="cstat-no" title="statement not covered" >  document.getElementById("timer").innerHTML = "";</span>
+<span class="cstat-no" title="statement not covered" >  clearInterval(t4);</span>
+<span class="cstat-no" title="statement not covered" >  localStorage.removeItem("timerStorage");</span>
+}
+&nbsp;
+/**
+ * A function used to check if the document has been loaded
+ */
+function isDocumentReady() {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (document.readyState != 'loading') {
+<span class="cstat-no" title="statement not covered" >        console.info('Scripts are deferred or loading async');</span>
+<span class="cstat-no" title="statement not covered" >        startAppRender();</span>
+    } else {
+        document.addEventListener('DOMContentLoaded', startAppRender);
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 11 2020 09:09:21 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

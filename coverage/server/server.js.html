@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for server/server.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">server/</a> server.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">55.26% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>42/76</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">51.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>18/35</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">54.67% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>41/75</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249</td><td class="line-coverage quiet"><span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">exports = {
+  /** registering the event along with its callback function */
+  events: [{ event: "onScheduledEvent", callback: "scheduledEventHandler" }],
+&nbsp;
+  /**
+   * This is the initial method called by the pomodoro app
+   * This method is responsible for setting up data skeleton and schedules
+   * This is invoked using the SMI
+   * @param {JSON} args - id of the user passed by the front-end using SMI call
+   */
+  startPomodoro: function(args) {
+    let promise1 = this.prepareForNextDay(args.id);
+    let promise2 = this.startSessions(args.id);
+    let obj = this;
+    Promise.all([promise1, promise2]).then(
+      () =&gt; {
+        let td = 0;
+        let hs = [{ noOfSessions: 0, noOfInterruptions: 0 }];
+        obj.getDataSkeleton(args.id).then(
+          () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >renderData(null, {}),</span></span>
+&nbsp;
+          () =&gt; {
+            obj.createDataSkeleton(args.id, { totalDays: td, history: hs })
+              .then(
+                () =&gt; renderData(null, {}),
+&nbsp;
+                err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >                  console.error("couldn't create data skeleton in startPomodoro\n%o",err);</span>
+<span class="cstat-no" title="statement not covered" >                  renderData({ status: err.status, message: err.message });</span>
+                });
+          }
+        );
+      },
+&nbsp;
+      err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error("Error in startPomodoro promises\n%o", err);</span>
+<span class="cstat-no" title="statement not covered" >        renderData({ status: err.status, message: err.message });</span>
+      }
+    );
+  },
+&nbsp;
+  /**
+   * Handler funtion for both scheduled events
+   * @param {object} args - data passed by scheduled events which inclues ID of the user and the type of schedule calling the handler
+   */
+  scheduledEventHandler: function(args) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    obj = this;</span>
+<span class="cstat-no" title="statement not covered" >    if (args.data.type == "regular") {</span>
+<span class="cstat-no" title="statement not covered" >      obj.getDataSkeleton(args.data.id).then(</span>
+        function(data) <span class="fstat-no" title="function not covered" >{</span>
+          let td = <span class="cstat-no" title="statement not covered" >data.totalDays;</span>
+          let hs = <span class="cstat-no" title="statement not covered" >data.history;</span>
+<span class="cstat-no" title="statement not covered" >          hs[td].noOfSessions += 1;</span>
+<span class="cstat-no" title="statement not covered" >          obj.updateDataSkeleton(args.data.id, { history: hs }).then(null, err =&gt;</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >              console.error("couldn't update session info in scheduledEventHandler\n%o",err)</span></span>
+            );
+        },
+&nbsp;
+        function(err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >          console.error("couldn't fetch data in scheduledEventHandler for updating sessions\n%o",err);</span>
+        }
+      );
+    } else {
+<span class="cstat-no" title="statement not covered" >      obj.getDataSkeleton(args.data.id).then(</span>
+        function(data) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >          td = data.totalDays;</span>
+<span class="cstat-no" title="statement not covered" >          hs = data.history;</span>
+<span class="cstat-no" title="statement not covered" >          data.totalDays &lt; 29 ? (td += 1) : hs.shift();</span>
+<span class="cstat-no" title="statement not covered" >          hs.push({ noOfSessions: 0, noOfInterruptions: 0 });</span>
+<span class="cstat-no" title="statement not covered" >          obj.updateDataSkeleton(args.data.id, { history: hs }).then(null, err =&gt;</span>
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >              console.error("couldn't update data skeleton for next dayin scheduledEventHandler\n%o",err)</span></span>
+            );
+        },
+&nbsp;
+        function(err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >          console.error("couldn't fetch data in scheduledEventHandler to prepare for next day\n%o",err);</span>
+        }
+      );
+    }
+  },
+&nbsp;
+  /**
+   * This function deletes the schedule and records the event as an interruption as this will be fired only when the session is interrupted
+   * @param {JSON} args - conatins the user id passed by the front - end
+   */
+  interruptSchedule: function(args) {
+    let obj = this;
+    let promise1 = obj.removeSchedule("regular_schedule");
+    obj.getDataSkeleton(args.id).then(
+      function(data) {
+        let td = data.totalDays;
+        let hs = data.history;
+        hs[td].noOfInterruptions += 1;
+        let promise2 = obj.updateDataSkeleton(args.id, { history: hs });
+        Promise.all([promise1, promise2]).then(
+          () =&gt; renderData(null, {}),
+&nbsp;
+          err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >            console.error("promise error in intteruptSchedule method\n%o", err);</span>
+<span class="cstat-no" title="statement not covered" >            renderData(err);</span>
+          }
+        );
+      },
+&nbsp;
+      function(err) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error("couldn't fetch data in interruptSchedule\n%o", err);</span>
+<span class="cstat-no" title="statement not covered" >        renderData(err);</span>
+      }
+    );
+  },
+&nbsp;
+  /**
+   * only deletes schedule without recording interruption
+   */
+  stopSchedule: function() <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    this.removeSchedule("regular_schedule").then(</span>
+      () =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >renderData(null, {}),</span></span>
+&nbsp;
+      err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error("couldn't delete regular_schedule\n%o", err);</span>
+<span class="cstat-no" title="statement not covered" >        renderData(err);</span>
+      }
+    );
+  },
+&nbsp;
+  /**
+   * This function deletes all schedules and data, essensitally making it a blank slate
+   * @param {JSON} args - conatins the user id passed by the front - end
+   */
+  clearActivity: function(args) {
+    this.removeSchedule("Increment_Day");
+    this.removeSchedule("regular_schedule");
+    $db.delete(args.id).then(
+      () =&gt; renderData(null, {}),
+&nbsp;
+      err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error("Error in clear activity\n%o", err);</span>
+<span class="cstat-no" title="statement not covered" >        renderData(err);</span>
+      }
+    );
+  },
+&nbsp;
+  /**
+   * This functions creates a new data skeleton populated with random data for 30 days
+   * @param {JSON} args - contains the user id passed by the front - end
+   */
+  generateTestData: function(args) {
+    let uid = args.id;
+    let td = 29;
+    let hs = [];
+    for (let i = 0; i &lt; 29; i++) {
+      hs.push({
+        noOfSessions: Math.ceil(Math.random() * 10),
+        noOfInterruptions: Math.ceil(Math.random() * 10)
+      });
+    }
+    this.createDataSkeleton(uid, { totalDays: td, history: hs }).then(
+      () =&gt; renderData(null, {}),
+&nbsp;
+      err =&gt; <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        console.error(</span>
+          "couldn't create data skeleton in generateTestData\n%o",
+          err
+        );
+<span class="cstat-no" title="statement not covered" >        renderData(err);</span>
+      }
+    );
+  },
+&nbsp;
+  /**
+   * This function deletes the schedule passed to it
+   * @param {string} scheduleName - name of the schedule to be deleted
+   * @returns {promise} returns the promise of schedule.delete async function call
+   */
+  removeSchedule: function(scheduleName) {
+    return $schedule.delete({ name: scheduleName });
+  },
+&nbsp;
+  /**
+   * This function updates the data skeleton with the new values using data storage API
+   * @param {string} user_id - ID of the user logged in
+   * @param {string} updateObject - js object containing the data to be updated in the data skelton
+   * @returns {Promise} returns the promise of the data storage API
+   */
+  updateDataSkeleton: function(user_id, updateObject) {
+    return $db.update(user_id, "set", updateObject);
+  },
+&nbsp;
+  /**
+   * This function updates the data skeleton with the new values using data storage API
+   * @param {string} user_id - ID of the user logged in
+   * @param {string} dataObject - js object containing the data to create the skeleton with
+   * @returns {Promise} returns promise of data storage API
+   */
+  createDataSkeleton: function(user_id, dataObject) {
+    return $db.set(user_id, dataObject, { setIf: "not_exist" });
+  },
+&nbsp;
+  /**
+   * This function retrieves the data skeleton
+   * @param {string} user_id - id of the user
+   * @returns {Promise} returns the promise of the Data storage API
+   */
+  getDataSkeleton: function(user_id) {
+    return $db.get(user_id);
+  },
+&nbsp;
+  /**
+   * a function to create a one time scheduled event, we also pass the type of schedule and id to the scheduledEventHandler using data object
+   * so that the handler can distinguish between different schedules and manipulate data accordingly
+   * @summary function to create one time scheduled event to prepare for next day
+   * @param {string} user_id - id of the user passed by the startPomodoro function
+   * @returns {Promise} returns the promise of the scheduled event creator
+   */
+  prepareForNextDay: function(user_id) {
+    $schedule.fetch({ name: "Increment_Day" }).then(null, () =&gt; {
+      let x = new Date();
+      x.setHours(0, 0, 0, 0);
+      x.setDate(x.getDate() + 1);
+      x = x.toISOString();
+&nbsp;
+      return $schedule.create({
+        name: "Increment_Day",
+        data: { type: "incrementDay", id: user_id },
+        schedule_at: x
+      });
+    });
+  },
+&nbsp;
+  /**
+   * a function to create a recurring schedule, we also pass the type of schedule and id to the scheduledEventHandler using data object
+   * so that the handler can distinguish between different schedules and manipulate data accordingly
+   * @summary function to create recurring schedule
+   * @param {string} user_id - id of the user passed by the startPomodoro function
+   * @returns {Promise} returns the promise of the scheduled events creator
+   */
+  startSessions: function(user_id) {
+    return $schedule.create({
+      name: "regular_schedule",
+      data: { type: "regular", id: user_id },
+      schedule_at: new Date().toISOString(),
+      repeat: {
+        time_unit: "minutes",
+        frequency: 25
+      }
+    });
+  }
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Dec 11 2020 09:09:21 GMT+0530 (India Standard Time)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
